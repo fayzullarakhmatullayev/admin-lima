@@ -1,0 +1,44 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  @include _991-block {
+    margin-top: 15px;
+  }
+  &-item {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #d4d3d3;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding-top: 1px;
+
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    transition: 0.3s;
+    @include _991-block {
+      width: 25px;
+      height: 25px;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+    &:hover,
+    &.active {
+      background: $blue;
+    }
+    &.empty {
+      background: none;
+      color: #000;
+      padding-bottom: 5px;
+    }
+  }
+}
